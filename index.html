@@ -1,0 +1,790 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>¿Quién conoce la cura?</title>
+<style>
+:root {
+  --verde: #17483e;
+  --verde2: #26765b;
+  --claro: #f4f7f1;
+  --crema: #fff8e8;
+  --texto: #24342f;
+  --linea: #dbe5dc;
+  --naranja: #bd6933;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--claro);
+  color: var(--texto);
+  font-family: system-ui, Arial, sans-serif;
+  line-height: 1.65;
+}
+header {
+  background: var(--verde);
+  color: white;
+  padding: 18px 5%;
+}
+header strong { font-size: 1.1rem; }
+nav {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: .85rem;
+  padding: 7px 10px;
+  border: 1px solid #ffffff55;
+  border-radius: 7px;
+}
+nav a:hover, nav a:focus {
+  background: #ffffff22;
+}
+.hero {
+  background: linear-gradient(130deg,#17483e,#318067);
+  color: white;
+  padding: 85px 6%;
+  text-align: center;
+}
+.hero h1 {
+  font-size: clamp(2.5rem,7vw,5rem);
+  line-height: 1.12;
+  margin: 12px auto;
+  max-width: 850px;
+}
+.hero p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.15rem;
+}
+main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 36px 20px;
+}
+section.nodo {
+  background: white;
+  border: 1px solid var(--linea);
+  border-radius: 18px;
+  margin: 25px 0;
+  padding: 30px;
+  scroll-margin-top: 20px;
+}
+h2 { color: var(--verde); }
+h3 { color: var(--verde2); }
+.etiqueta {
+  color: var(--naranja);
+  font-weight: 750;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-size: .75rem;
+}
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 15px;
+  margin: 22px 0;
+}
+.tarjeta {
+  display: block;
+  padding: 22px;
+  background: var(--crema);
+  border: 1px solid #eadfc8;
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--texto);
+  transition: transform .2s;
+}
+.tarjeta:hover { transform: translateY(-3px); }
+.tarjeta strong {
+  display: block;
+  color: var(--verde);
+  margin-bottom: 7px;
+}
+.conexiones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 25px;
+}
+.boton {
+  display: inline-block;
+  border: 0;
+  background: var(--verde2);
+  color: white;
+  border-radius: 8px;
+  padding: 11px 16px;
+  text-decoration: none;
+  font: inherit;
+  cursor: pointer;
+}
+.boton:hover { background: var(--verde); }
+.boton.secundario {
+  background: #e8f1ea;
+  color: var(--verde);
+}
+.aviso {
+  background: var(--crema);
+  border-left: 4px solid var(--naranja);
+  padding: 17px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+.fase {
+  border-left: 4px solid var(--verde2);
+  padding: 8px 20px;
+  margin: 20px 0;
+  background: #f7faf7;
+}
+.fase small { color: #637267; }
+iframe {
+  width: 100%;
+  height: 610px;
+  border: 0;
+  border-radius: 12px;
+  background: #edf2ed;
+}
+.video iframe {
+  height: auto;
+  aspect-ratio: 16/9;
+}
+textarea, input, select {
+  width: 100%;
+  border: 1px solid #bdcec1;
+  border-radius: 8px;
+  padding: 11px;
+  font: inherit;
+  margin: 5px 0 15px;
+}
+label { display: block; font-weight: 650; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid var(--linea);
+  padding: 12px;
+  text-align: left;
+  vertical-align: top;
+}
+th { background: #e8f1ea; }
+.tabla { overflow-x: auto; }
+footer {
+  text-align: center;
+  padding: 35px;
+  background: var(--verde);
+  color: white;
+}
+@media(max-width:650px){
+  header { padding: 15px; }
+  main { padding: 15px; }
+  section.nodo { padding: 20px; }
+  iframe { height: 490px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <strong>✳ ¿Quién conoce la cura?</strong>
+  <nav aria-label="Navegación principal">
+    <a href="#inicio">Inicio</a>
+    <a href="#mundo">El mundo nos habla</a>
+    <a href="#ciencia">¿Cómo conocemos?</a>
+    <a href="#iap">Investigar con otros</a>
+    <a href="#ruta">Nuestra ruta</a>
+    <a href="#laboratorio">Laboratorio</a>
+    <a href="#saberes">Tejido de saberes</a>
+    <a href="#transformar">Transformar y volver</a>
+    <a href="#docente">Guía docente</a>
+  </nav>
+</header>
+
+<div class="hero" id="inicio">
+  <p>EXPERIENCIA EDUCATIVA TRANSDISCIPLINAR</p>
+  <h1>¿Quién conoce la cura?</h1>
+  <p>Ciencia, saberes y acción colectiva para transformar nuestro entorno.</p>
+  <p style="margin-top:25px">
+    Grado octavo · Ciencias Naturales y Educación Ambiental
+  </p>
+  <p style="margin-top:25px">
+    <a class="boton" href="#mapa">Comenzar la exploración ↓</a>
+  </p>
+</div>
+
+<main>
+
+<section class="nodo" id="mapa">
+  <span class="etiqueta">Mapa hipertextual</span>
+  <h2>Ocho caminos para investigar y transformar</h2>
+  <p>
+    Esta experiencia no tiene una única ruta de lectura.
+    Puedes explorar diferentes preguntas, relacionar los
+    conocimientos científicos con las experiencias de la
+    comunidad y regresar a cualquier nodo.
+  </p>
+
+  <div class="tarjetas">
+    <a class="tarjeta" href="#mundo">
+      <strong>01 · El mundo nos habla</strong>
+      Observación y problemas ambientales.
+    </a>
+    <a class="tarjeta" href="#ciencia">
+      <strong>02 · ¿Cómo conocemos?</strong>
+      Preguntas, hipótesis y evidencias.
+    </a>
+    <a class="tarjeta" href="#iap">
+      <strong>03 · Investigar con otros</strong>
+      Investigación participativa y diálogo de saberes.
+    </a>
+    <a class="tarjeta" href="#ruta">
+      <strong>04 · Nuestra ruta</strong>
+      Seis fases de investigación y acción.
+    </a>
+    <a class="tarjeta" href="#laboratorio">
+      <strong>05 · Laboratorio interactivo</strong>
+      Juegos y recursos hipermedia.
+    </a>
+    <a class="tarjeta" href="#saberes">
+      <strong>06 · Tejido de saberes</strong>
+      Bitácora y reflexión.
+    </a>
+    <a class="tarjeta" href="#transformar">
+      <strong>07 · Transformar y volver</strong>
+      Acción, evaluación y nuevos ciclos.
+    </a>
+    <a class="tarjeta" href="#docente">
+      <strong>08 · Guía docente</strong>
+      Fundamentación y orientaciones.
+    </a>
+  </div>
+</section>
+
+<section class="nodo" id="mundo">
+  <span class="etiqueta">Nodo 01</span>
+  <h2>El mundo nos habla</h2>
+ <p>
+  La canción <strong>Cuidados intensivos</strong>,
+  interpretada por <strong>Andrés Huertas</strong>,
+  invita a reflexionar sobre las consecuencias
+  de las actividades humanas en la naturaleza
+  y las posibilidades de actuar colectivamente
+  para transformar esta situación.
+</p>
+
+  <div class="aviso">
+    <strong>Pregunta provocadora:</strong>
+    ¿Qué señales nos permiten reconocer que nuestro
+    entorno necesita ser cuidado y transformado?
+  </div>
+
+  <a class="boton" target="_blank" rel="noopener noreferrer"
+    href="https://youtu.be/uzxDgh95kmk">
+    Escuchar Cuidados intensivos ↗
+  </a>
+
+  <h3>Actividad de exploración</h3>
+  <p>
+    Observar el entorno escolar, identificar situaciones
+    ambientales que generan preocupación y contrastar
+    las observaciones con los conocimientos y experiencias
+    de distintos integrantes de la comunidad educativa.
+  </p>
+
+  <p><strong>Evidencia inicial:</strong> mapa participativo
+    de situaciones ambientales y preguntas de investigación.</p>
+
+  <div class="conexiones">
+    <a class="boton secundario" href="#ciencia">¿Cómo investigar?</a>
+    <a class="boton secundario" href="#iap">¿Con quiénes investigar?</a>
+    <a class="boton secundario" href="#saberes">Registrar preguntas</a>
+  </div>
+</section>
+
+<section class="nodo" id="ciencia">
+  <span class="etiqueta">Nodo 02</span>
+  <h2>¿Cómo conocemos?</h2>
+  <p>
+    El método científico aporta procedimientos para
+    observar fenómenos, formular preguntas, plantear
+    hipótesis, organizar evidencias, interpretar resultados
+    y revisar nuestras explicaciones.
+  </p>
+
+  <h3>De la preocupación a la pregunta científica</h3>
+  <p>
+    Una preocupación general sobre la contaminación
+    puede convertirse en una pregunta investigable
+    cuando se precisan los fenómenos, los lugares,
+    las variables y las formas de producir evidencias.
+  </p>
+
+  <div class="aviso">
+    <strong>Ejemplo provisional:</strong>
+    ¿Qué tipos y cantidades de residuos sólidos
+    se generan en diferentes espacios de nuestra
+    institución educativa?
+  </div>
+
+  <p>
+    La pregunta definitiva se formulará y revisará
+    mediante el diagnóstico y el diseño colaborativo
+    de la investigación con la comunidad educativa.
+  </p>
+
+  <h3>Preguntas para profundizar</h3>
+  <p>
+    ¿Qué podemos observar directamente?
+    ¿Qué información necesitamos?
+    ¿Cómo contrastaremos las hipótesis?
+    ¿Qué limitaciones tienen nuestros procedimientos?
+  </p>
+
+  <div class="conexiones">
+    <a class="boton secundario" href="#iap">Diálogo de saberes</a>
+    <a class="boton secundario" href="#ruta">Fases investigativas</a>
+    <a class="boton secundario" href="#laboratorio">Juego sobre investigación</a>
+  </div>
+</section>
+
+<section class="nodo" id="iap">
+  <span class="etiqueta">Nodo 03</span>
+  <h2>Investigar con otros</h2>
+  <p>
+    La Investigación-Acción Participativa permite
+    comprender que las personas involucradas en
+    una problemática no son únicamente fuentes
+    de información, sino participantes en la
+    construcción de conocimientos y decisiones.
+  </p>
+
+  <h3>El diseño colaborativo como punto de partida</h3>
+  <p>
+    La estructura actual constituye una propuesta
+    pedagógica inicial. La configuración definitiva
+    del problema, las preguntas, los procedimientos
+    y las acciones se desarrollará con la comunidad
+    educativa cuando inicie la ejecución.
+  </p>
+
+  <div class="tarjetas">
+    <div class="tarjeta">
+      <strong>Reconocer</strong>
+      Identificar experiencias y saberes de
+      quienes habitan la escuela.
+    </div>
+    <div class="tarjeta">
+      <strong>Dialogar</strong>
+      Contrastar explicaciones científicas,
+      observaciones y conocimientos cotidianos.
+    </div>
+    <div class="tarjeta">
+      <strong>Decidir</strong>
+      Acordar preguntas, procedimientos y
+      posibles acciones investigativas.
+    </div>
+    <div class="tarjeta">
+      <strong>Revisar</strong>
+      Interpretar colectivamente los resultados
+      y replantear las decisiones cuando corresponda.
+    </div>
+  </div>
+
+  <div class="conexiones">
+    <a class="boton secundario" href="#mundo">El problema</a>
+    <a class="boton secundario" href="#saberes">Construcción colectiva</a>
+    <a class="boton secundario" href="#transformar">Acción participativa</a>
+  </div>
+</section>
+
+<section class="nodo" id="ruta">
+  <span class="etiqueta">Nodo 04</span>
+  <h2>Nuestra ruta de investigación y acción</h2>
+  <p>
+    Se propone un itinerario inicial de ocho semanas.
+    Las fases articulan los procedimientos científicos
+    con los momentos participativos de la IAP.
+    Su desarrollo podrá ajustarse mediante
+    los acuerdos con la comunidad educativa.
+  </p>
+
+  <div class="fase">
+    <small>SEMANA 1</small>
+    <h3>1. Observar y reconocer el problema</h3>
+    <p>Método científico: observación y descripción.</p>
+    <p>IAP: diagnóstico participativo.</p>
+    <p><strong>Evidencia:</strong> mapa del problema,
+    diario de campo y diagnóstico colectivo.</p>
+  </div>
+
+  <div class="fase">
+    <small>SEMANA 2</small>
+    <h3>2. Preguntar e hipotetizar</h3>
+    <p>Método científico: preguntas,
+    antecedentes e hipótesis.</p>
+    <p>IAP: diálogo de saberes y priorización.</p>
+    <p><strong>Evidencia:</strong> pregunta,
+    hipótesis y objetivos iniciales.</p>
+  </div>
+
+  <div class="fase">
+    <small>SEMANAS 3 Y 4</small>
+    <h3>3. Diseñar y experimentar</h3>
+    <p>Método científico: procedimientos y datos.</p>
+    <p>IAP: planificación conjunta.</p>
+    <p><strong>Evidencia:</strong> protocolo,
+    registros y diario de campo.</p>
+  </div>
+
+  <div class="fase">
+    <small>SEMANA 5</small>
+    <h3>4. Analizar e interpretar</h3>
+    <p>Método científico: organización
+    y análisis de resultados.</p>
+    <p>IAP: reflexión colectiva.</p>
+    <p><strong>Evidencia:</strong> gráficos,
+    conclusiones preliminares y actas.</p>
+  </div>
+
+  <div class="fase">
+    <small>SEMANA 6</small>
+    <h3>5. Actuar y transformar</h3>
+    <p>Método científico: aplicación
+    y valoración de resultados.</p>
+    <p>IAP: acción participativa.</p>
+    <p><strong>Evidencia:</strong> plan de acción
+    y registro de implementación.</p>
+  </div>
+
+  <div class="fase">
+    <small>SEMANAS 7 Y 8</small>
+    <h3>6. Evaluar, comunicar y reiniciar</h3>
+    <p>Método científico: conclusiones
+    y comunicación.</p>
+    <p>IAP: evaluación y nueva planificación.</p>
+    <p><strong>Evidencia:</strong> informe escolar,
+    socialización y propuesta de continuidad.</p>
+  </div>
+
+  <div class="conexiones">
+    <a class="boton secundario" href="#ciencia">Volver a la ciencia</a>
+    <a class="boton secundario" href="#iap">Revisar la IAP</a>
+    <a class="boton secundario" href="#saberes">Bitácora</a>
+  </div>
+</section>
+
+<section class="nodo" id="laboratorio">
+  <span class="etiqueta">Nodo 05</span>
+  <h2>Laboratorio interactivo</h2>
+  <p>
+    Los siguientes juegos permiten aplicar
+    conocimientos y plantear preguntas que
+    posteriormente deberán contrastarse con
+    las realidades de la institución educativa.
+  </p>
+
+  <h3>Juego 1. ¿Quién conoce la cura?</h3>
+  <p>Misión: investigar para transformar.</p>
+
+  <button class="boton" type="button"
+    onclick="cargarJuego('juego1',
+    'https://es.educaplay.com/juego/31109607-quien_conoce_la_cura_mision_investigar_para_transformar.html')">
+    Cargar juego 1
+  </button>
+
+  <div id="juego1"></div>
+
+  <h3>Juego 2. ¿Dónde va cada residuo?</h3>
+  <p>Misión: salvar nuestra escuela.</p>
+
+  <button class="boton" type="button"
+    onclick="cargarJuego('juego2',
+    'https://es.educaplay.com/juego/31109711-donde_va_cada_residuo_mision_salvar_nuestra_escuela.html')">
+    Cargar juego 2
+  </button>
+
+  <div id="juego2"></div>
+
+  <div class="aviso">
+    <strong>Después de jugar:</strong>
+    ¿Qué conocimientos nos ayudaron a responder?
+    ¿Qué dudas aparecieron?
+    ¿Qué necesitamos investigar en nuestra institución?
+  </div>
+
+  <div class="conexiones">
+    <a class="boton secundario" href="#ciencia">Revisar explicaciones</a>
+    <a class="boton secundario" href="#ruta">Aplicar en la investigación</a>
+    <a class="boton secundario" href="#saberes">Registrar aprendizajes</a>
+  </div>
+</section>
+
+<section class="nodo" id="saberes">
+  <span class="etiqueta">Nodo 06</span>
+  <h2>Tejido de saberes</h2>
+  <p>
+    El conocimiento se construye durante el proceso.
+    Esta bitácora permite registrar preguntas,
+    observaciones, interpretaciones y revisiones.
+  </p>
+
+  <div class="aviso">
+    Esta versión guarda los registros únicamente
+    en el navegador del dispositivo utilizado.
+    No es todavía una bitácora colaborativa
+    compartida entre estudiantes.
+  </div>
+
+  <form id="bitacora">
+    <label for="pregunta">Nuestra pregunta</label>
+    <textarea id="pregunta" rows="3"></textarea>
+
+    <label for="evidencias">Observaciones y evidencias</label>
+    <textarea id="evidencias" rows="3"></textarea>
+
+    <label for="dialogo">Saberes y perspectivas de la comunidad</label>
+    <textarea id="dialogo" rows="3"></textarea>
+
+    <label for="reflexion">¿Qué cambió en nuestra comprensión?</label>
+    <textarea id="reflexion" rows="3"></textarea>
+
+    <button type="button" class="boton" onclick="guardar()">
+      Guardar en este dispositivo
+    </button>
+    <button type="button" class="boton secundario"
+      onclick="descargar()">
+      Descargar registro
+    </button>
+  </form>
+
+  <p id="estado" role="status"></p>
+
+  <div class="conexiones">
+    <a class="boton secundario" href="#iap">Dialogar con otros</a>
+    <a class="boton secundario" href="#ciencia">Contrastar evidencias</a>
+    <a class="boton secundario" href="#transformar">Evaluar y actuar</a>
+  </div>
+</section>
+
+<section class="nodo" id="transformar">
+  <span class="etiqueta">Nodo 07</span>
+  <h2>Transformar y volver</h2>
+
+  <p>
+    La acción transformadora no constituye el punto
+    final de la investigación. Sus resultados deben
+    ser revisados y discutidos colectivamente,
+    dando lugar a nuevas preguntas.
+  </p>
+
+  <div class="tarjetas">
+    <div class="tarjeta">
+      <strong>¿Qué encontramos?</strong>
+      Interpretación de evidencias y resultados.
+    </div>
+    <div class="tarjeta">
+      <strong>¿Qué decidimos?</strong>
+      Acuerdos y alternativas de transformación.
+    </div>
+    <div class="tarjeta">
+      <strong>¿Qué cambió?</strong>
+      Comparación de la situación inicial y posterior.
+    </div>
+    <div class="tarjeta">
+      <strong>¿Qué sigue?</strong>
+      Nuevas preguntas y otro ciclo participativo.
+    </div>
+  </div>
+
+  <p>
+    El manejo de residuos sólidos constituye un
+    escenario inicial de investigación. Las acciones
+    concretas deberán responder al diagnóstico y
+    a las decisiones de la comunidad educativa.
+  </p>
+
+  <div class="conexiones">
+    <a class="boton secundario" href="#mundo">Volver al problema</a>
+    <a class="boton secundario" href="#saberes">Revisar la bitácora</a>
+    <a class="boton secundario" href="#iap">Evaluación participativa</a>
+  </div>
+</section>
+
+<section class="nodo" id="docente">
+  <span class="etiqueta">Nodo 08</span>
+  <h2>Guía docente</h2>
+
+  <h3>Contextualización</h3>
+  <p>
+    Experiencia educativa dirigida a estudiantes
+    de grado octavo, en el área de Ciencias Naturales
+    y Educación Ambiental.
+  </p>
+
+  <h3>Propósito formativo</h3>
+  <p>
+    Promover la comprensión y aplicación de
+    procedimientos científicos en la investigación
+    de problemáticas ambientales del entorno escolar,
+    mediante su articulación con la IAP y el
+    reconocimiento de saberes de la comunidad.
+  </p>
+
+  <h3>Metodología</h3>
+  <p>
+    La propuesta relaciona el método científico
+    con las lógicas de la Investigación-Acción
+    Participativa, desde una perspectiva
+    transdisciplinar abierta al diálogo
+    de saberes y a la transformación colectiva.
+  </p>
+
+  <p>
+    La etapa inicial de diagnóstico y diseño
+    colaborativo se desarrollará durante la
+    ejecución, con participación de la comunidad.
+  </p>
+
+  <h3>Secuencia didáctica</h3>
+  <p>
+    Se organiza inicialmente en seis fases
+    distribuidas durante ocho semanas.
+    Las fases podrán revisarse conforme
+    a los acuerdos del proceso participativo.
+  </p>
+
+  <h3>Evaluación formativa propuesta</h3>
+  <div class="tabla">
+    <table>
+      <tr>
+        <th>Dimensión</th>
+        <th>Aspectos por valorar</th>
+      </tr>
+      <tr>
+        <td>Indagación científica</td>
+        <td>Preguntas, hipótesis, datos,
+        explicaciones y reconocimiento de límites.</td>
+      </tr>
+      <tr>
+        <td>Participación</td>
+        <td>Diálogo, acuerdos y construcción
+        colectiva de decisiones.</td>
+      </tr>
+      <tr>
+        <td>Relación sociedad-naturaleza</td>
+        <td>Comprensión de prácticas e impactos
+        ambientales del contexto escolar.</td>
+      </tr>
+      <tr>
+        <td>Reflexión y transformación</td>
+        <td>Evaluación de acciones y
+        reformulación de preguntas.</td>
+      </tr>
+    </table>
+  </div>
+
+  <h3>Consideraciones</h3>
+  <p>
+    Evitar la manipulación de residuos peligrosos,
+    asegurar supervisión docente y garantizar
+    la protección de datos e imágenes de
+    las personas participantes.
+  </p>
+
+  <p>
+    El trabajo de campo y el diálogo comunitario
+    podrán desarrollarse también mediante
+    recursos impresos cuando no exista
+    conectividad suficiente.
+  </p>
+
+  <div class="conexiones">
+    <a class="boton secundario" href="#ruta">Ver secuencia</a>
+    <a class="boton secundario" href="#mapa">Mapa hipertextual</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <strong>¿Quién conoce la cura?</strong>
+  <p>Ciencia, saberes y acción colectiva.</p>
+  <p>Yohana · Leidy · Giovanni · Diana</p>
+  <p>Maestría en Educación Virtual</p>
+</footer>
+
+<script>
+function cargarJuego(id, url) {
+  const destino = document.getElementById(id);
+  if (destino.querySelector("iframe")) return;
+  const iframe = document.createElement("iframe");
+  iframe.src = url;
+  iframe.title = "Actividad educativa de Educaplay";
+  iframe.setAttribute("allowfullscreen", "");
+  iframe.setAttribute("allow",
+    "fullscreen; autoplay; allow-top-navigation-by-user-activation");
+  iframe.loading = "lazy";
+  destino.appendChild(iframe);
+}
+
+const campos = ["pregunta","evidencias","dialogo","reflexion"];
+
+function guardar() {
+  const datos = {};
+  campos.forEach(id => {
+    datos[id] = document.getElementById(id).value;
+  });
+  try {
+    localStorage.setItem("bitacora-cura", JSON.stringify(datos));
+    document.getElementById("estado").textContent =
+      "Borrador guardado en este navegador.";
+  } catch(e) {
+    document.getElementById("estado").textContent =
+      "No se pudo guardar. Descarga una copia del registro.";
+  }
+}
+
+function descargar() {
+  const texto = campos.map(id => {
+    const etiqueta = document.querySelector(
+      'label[for="' + id + '"]').textContent;
+    return etiqueta + "\\n" +
+      document.getElementById(id).value;
+  }).join("\\n\\n");
+  const archivo = new Blob([texto], {
+    type:"text/plain;charset=utf-8"
+  });
+  const url = URL.createObjectURL(archivo);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "bitacora-quien-conoce-la-cura.txt";
+  a.click();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  try {
+    const datos = JSON.parse(
+      localStorage.getItem("bitacora-cura") || "{}"
+    );
+    campos.forEach(id => {
+      if (typeof datos[id] === "string") {
+        document.getElementById(id).value = datos[id];
+      }
+    });
+  } catch(e) {
+    document.getElementById("estado").textContent =
+      "No se pudo recuperar el borrador local.";
+  }
+});
+</script>
+
+</body>
+</html>
