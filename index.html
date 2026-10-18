@@ -182,6 +182,56 @@ footer {
   background: var(--verde);
   color: white;
 }
+
+/* Fuentes externas con sentido pedagógico, integradas a cada nodo */
+.fuentes {
+  margin: 30px 0 24px;
+  padding-top: 17px;
+  border-top: 1px solid var(--linea);
+}
+.fuentes h3 { margin-bottom: 5px; }
+.fuentes-intro { max-width: 850px; margin-top: 0; }
+.fuentes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+}
+.fuente-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: 1px solid #d3e4da;
+  border-radius: 12px;
+  padding: 18px;
+  background: #f7faf8;
+}
+.fuente-card h4 { color: var(--verde); margin: 0; font-size: 1.06rem; line-height: 1.4; }
+.fuente-card p { margin: 0; }
+.fuente-origen {
+  color: #526e61;
+  font-size: .79rem;
+  font-weight: 700;
+}
+.fuente-pregunta {
+  padding: 10px 12px;
+  border-left: 3px solid var(--naranja);
+  background: #fffaf0;
+  font-size: .93rem;
+}
+.fuente-enlace {
+  align-self: flex-start;
+  margin-top: auto;
+  color: #115d49;
+  font-weight: 750;
+  text-underline-offset: 3px;
+  padding-top: 7px;
+}
+.fuente-enlace:focus-visible,
+.fase-recurso a:focus-visible { outline: 3px solid var(--naranja); outline-offset: 3px; }
+.fase-recurso { margin: 10px 0; font-size: .93rem; }
+.fase-recurso a { color: #115d49; }
+.mapa-guia { font-size: .95rem; }
+
 @media(max-width:650px){
   header { padding: 15px; }
   main { padding: 15px; }
@@ -230,6 +280,10 @@ footer {
     conocimientos científicos con las experiencias de la
     comunidad y regresar a cualquier nodo.
   </p>
+
+  <div class="aviso mapa-guia">
+    <strong>¿Cómo navegar?</strong> Los botones entre nodos permiten recorrer el sitio sin un orden único. En cada nodo encontrarás <em>fuentes externas</em> para contrastar información y preguntas que podrás retomar en la bitácora. La ruta de ocho semanas organiza la experiencia educativa, pero no limita los caminos de indagación.
+  </div>
 
   <div class="tarjetas">
     <a class="tarjeta" href="#mundo">
@@ -301,6 +355,28 @@ footer {
   <p><strong>Evidencia inicial:</strong> mapa participativo
     de situaciones ambientales y preguntas de investigación.</p>
 
+  <!-- Recursos externos con función pedagógica: mundo -->
+  <div class="fuentes" aria-label="Fuentes externas para este nodo">
+    <h3>Explora, investiga y conecta</h3>
+    <p class="fuentes-intro">Estos materiales amplían la experiencia: consulta las fuentes, contrasta sus explicaciones con lo que observa la comunidad y registra nuevas preguntas en la <a href="#saberes">bitácora</a>.</p>
+    <div class="fuentes-grid">
+      <article class="fuente-card">
+        <p class="fuente-origen">PNUMA · Especial multimedia</p>
+        <h4>Contaminación por Residuos 101</h4>
+        <p>Explora cómo los patrones de producción y consumo se relacionan con los residuos y sus impactos.</p>
+        <p class="fuente-pregunta"><strong>Para investigar:</strong> ¿En qué se parecen o diferencian estas situaciones globales de lo que observamos en la escuela?</p>
+        <a class="fuente-enlace" href="https://www.unep.org/interactives/zero-waste-101/es.html" target="_blank" rel="noopener noreferrer" aria-label="Abrir Contaminación por Residuos 101 en una pestaña nueva">Consultar fuente externa ↗</a>
+      </article>
+      <article class="fuente-card">
+        <p class="fuente-origen">Colombia Aprende · Experiencia escolar</p>
+        <h4>Ecoinvestigadores: una propuesta educativa integral</h4>
+        <p>Conoce una experiencia colombiana donde la investigación ambiental surge de situaciones del entorno y da lugar a iniciativas escolares.</p>
+        <p class="fuente-pregunta"><strong>Para investigar:</strong> ¿Qué aprendemos de esta experiencia sin asumir que nuestra comunidad tiene el mismo problema?</p>
+        <a class="fuente-enlace" href="https://contactomaestro.colombiaaprende.edu.co/experiencias-significativas/ecoinvestigadores-una-propuesta-educativa-integral" target="_blank" rel="noopener noreferrer" aria-label="Abrir Ecoinvestigadores: una propuesta educativa integral en una pestaña nueva">Consultar fuente externa ↗</a>
+      </article>
+    </div>
+  </div>
+
   <div class="conexiones">
     <a class="boton secundario" href="#ciencia">¿Cómo investigar?</a>
     <a class="boton secundario" href="#iap">¿Con quiénes investigar?</a>
@@ -346,6 +422,28 @@ footer {
     ¿Cómo contrastaremos las hipótesis?
     ¿Qué limitaciones tienen nuestros procedimientos?
   </p>
+
+  <!-- Recursos externos con función pedagógica: ciencia -->
+  <div class="fuentes" aria-label="Fuentes externas para este nodo">
+    <h3>Explora, investiga y conecta</h3>
+    <p class="fuentes-intro">Estos materiales amplían la experiencia: consulta las fuentes, contrasta sus explicaciones con lo que observa la comunidad y registra nuevas preguntas en la <a href="#saberes">bitácora</a>.</p>
+    <div class="fuentes-grid">
+      <article class="fuente-card">
+        <p class="fuente-origen">Khan Academy · Lectura explicativa</p>
+        <h4>El método científico</h4>
+        <p>Distingue observación, pregunta, hipótesis comprobable y revisión de explicaciones.</p>
+        <p class="fuente-pregunta"><strong>Para investigar:</strong> ¿Qué evidencia necesitaríamos para contrastar nuestra hipótesis sobre residuos?</p>
+        <a class="fuente-enlace" href="https://es.khanacademy.org/science/biology/intro-to-biology/intro-to-biology/science-of-biology/a/the-science-of-biology" target="_blank" rel="noopener noreferrer" aria-label="Abrir El método científico en una pestaña nueva">Consultar fuente externa ↗</a>
+      </article>
+      <article class="fuente-card">
+        <p class="fuente-origen">Ministerio de Educación Nacional · Documento curricular</p>
+        <h4>Estándares básicos de competencias</h4>
+        <p>Consulta la guía oficial y revisa el apartado de Ciencias Naturales para octavo y noveno.</p>
+        <p class="fuente-pregunta"><strong>Para investigar:</strong> ¿Cómo se relacionan la formulación de hipótesis y el análisis de información con nuestros objetivos de aprendizaje?</p>
+        <a class="fuente-enlace" href="https://www.mineducacion.gov.co/1621/articles-81033_archivo.pdf" target="_blank" rel="noopener noreferrer" aria-label="Abrir Estándares básicos de competencias en una pestaña nueva">Consultar fuente externa ↗</a>
+      </article>
+    </div>
+  </div>
 
   <div class="conexiones">
     <a class="boton secundario" href="#iap">Diálogo de saberes</a>
@@ -397,6 +495,28 @@ footer {
     </div>
   </div>
 
+  <!-- Recursos externos con función pedagógica: iap -->
+  <div class="fuentes" aria-label="Fuentes externas para este nodo">
+    <h3>Explora, investiga y conecta</h3>
+    <p class="fuentes-intro">Estos materiales amplían la experiencia: consulta las fuentes, contrasta sus explicaciones con lo que observa la comunidad y registra nuevas preguntas en la <a href="#saberes">bitácora</a>.</p>
+    <div class="fuentes-grid">
+      <article class="fuente-card">
+        <p class="fuente-origen">Universidad Nacional de Colombia · Artículo</p>
+        <h4>Investigación-acción participativa: la ciencia en el terreno de la realidad</h4>
+        <p>Expone la participación de las personas como protagonistas de la producción de conocimientos y la transformación social.</p>
+        <p class="fuente-pregunta"><strong>Para investigar:</strong> ¿Qué decisiones debe tomar la comunidad y cuáles no deberíamos definir solo desde el equipo docente?</p>
+        <a class="fuente-enlace" href="https://periodico.unal.edu.co/articulos/investigacion-accion-participativa-la-ciencia-en-el-terreno-de-la-realidad" target="_blank" rel="noopener noreferrer" aria-label="Abrir Investigación-acción participativa: la ciencia en el terreno de la realidad en una pestaña nueva">Consultar fuente externa ↗</a>
+      </article>
+      <article class="fuente-card">
+        <p class="fuente-origen">FAO / CLACSO · Manual en español</p>
+        <h4>Diagnóstico Rural Participativo: una guía práctica</h4>
+        <p>Ofrece técnicas de diagnóstico y documentación participativa; requiere adaptar las herramientas al contexto escolar.</p>
+        <p class="fuente-pregunta"><strong>Para investigar:</strong> ¿Cómo podríamos organizar un recorrido y un mapa colectivo sin sustituir las voces de quienes habitan la escuela?</p>
+        <a class="fuente-enlace" href="https://www.fao.org/family-farming/detail/es/c/1443359/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Diagnóstico Rural Participativo: una guía práctica en una pestaña nueva">Consultar fuente externa ↗</a>
+      </article>
+    </div>
+  </div>
+
   <div class="conexiones">
     <a class="boton secundario" href="#mundo">El problema</a>
     <a class="boton secundario" href="#saberes">Construcción colectiva</a>
@@ -422,6 +542,7 @@ footer {
     <p>IAP: diagnóstico participativo.</p>
     <p><strong>Evidencia:</strong> mapa del problema,
     diario de campo y diagnóstico colectivo.</p>
+    <p class="fase-recurso">Herramienta de apoyo: <a href="https://www.fao.org/family-farming/detail/es/c/1443359/" target="_blank" rel="noopener noreferrer">diagnóstico participativo (FAO / CLACSO) ↗</a></p>
   </div>
 
   <div class="fase">
@@ -432,6 +553,7 @@ footer {
     <p>IAP: diálogo de saberes y priorización.</p>
     <p><strong>Evidencia:</strong> pregunta,
     hipótesis y objetivos iniciales.</p>
+    <p class="fase-recurso">Lectura para profundizar: <a href="https://es.khanacademy.org/science/biology/intro-to-biology/intro-to-biology/science-of-biology/a/the-science-of-biology" target="_blank" rel="noopener noreferrer">el método científico (Khan Academy) ↗</a></p>
   </div>
 
   <div class="fase">
@@ -441,6 +563,7 @@ footer {
     <p>IAP: planificación conjunta.</p>
     <p><strong>Evidencia:</strong> protocolo,
     registros y diario de campo.</p>
+    <p class="fase-recurso">Instrumento de referencia: <a href="https://www.epa.gov/sustainable-management-food/guide-conducting-student-food-waste-audits-resource-schools" target="_blank" rel="noopener noreferrer">auditoría escolar de desperdicios alimentarios (EPA; inglés) ↗</a></p>
   </div>
 
   <div class="fase">
@@ -451,6 +574,7 @@ footer {
     <p>IAP: reflexión colectiva.</p>
     <p><strong>Evidencia:</strong> gráficos,
     conclusiones preliminares y actas.</p>
+    <p class="fase-recurso">Explora datos: <a href="https://ourworldindata.org/grapher/plastic-waste-generation" target="_blank" rel="noopener noreferrer">visualización internacional de residuos plásticos (inglés) ↗</a></p>
   </div>
 
   <div class="fase">
@@ -461,6 +585,7 @@ footer {
     <p>IAP: acción participativa.</p>
     <p><strong>Evidencia:</strong> plan de acción
     y registro de implementación.</p>
+    <p class="fase-recurso">Ideas para debatir: <a href="https://www.ellenmacarthurfoundation.org/es/el-diagrama-de-la-mariposa" target="_blank" rel="noopener noreferrer">ciclos de economía circular ↗</a></p>
   </div>
 
   <div class="fase">
@@ -471,6 +596,29 @@ footer {
     <p>IAP: evaluación y nueva planificación.</p>
     <p><strong>Evidencia:</strong> informe escolar,
     socialización y propuesta de continuidad.</p>
+    <p class="fase-recurso">Experiencia para contrastar: <a href="https://contactomaestro.colombiaaprende.edu.co/experiencias-significativas/ecoinvestigadores-una-propuesta-educativa-integral" target="_blank" rel="noopener noreferrer">Ecoinvestigadores (Colombia Aprende) ↗</a></p>
+  </div>
+
+  <!-- Recursos externos con función pedagógica: ruta -->
+  <div class="fuentes" aria-label="Fuentes externas para este nodo">
+    <h3>Explora, investiga y conecta</h3>
+    <p class="fuentes-intro">Estos materiales amplían la experiencia: consulta las fuentes, contrasta sus explicaciones con lo que observa la comunidad y registra nuevas preguntas en la <a href="#saberes">bitácora</a>.</p>
+    <div class="fuentes-grid">
+      <article class="fuente-card">
+        <p class="fuente-origen">EPA · Guía metodológica en inglés</p>
+        <h4>Cómo realizar auditorías escolares de desperdicios alimentarios</h4>
+        <p>Ofrece pautas para registrar y analizar desperdicios alimentarios escolares; debe adaptarse si se investigan otros tipos de residuos.</p>
+        <p class="fuente-pregunta"><strong>Para investigar:</strong> ¿Qué registraremos, durante cuánto tiempo y con qué precauciones de higiene y seguridad?</p>
+        <a class="fuente-enlace" href="https://www.epa.gov/sustainable-management-food/guide-conducting-student-food-waste-audits-resource-schools" target="_blank" rel="noopener noreferrer" aria-label="Abrir Cómo realizar auditorías escolares de desperdicios alimentarios en una pestaña nueva">Consultar fuente externa ↗</a>
+      </article>
+      <article class="fuente-card">
+        <p class="fuente-origen">FAO / CLACSO · Herramientas metodológicas</p>
+        <h4>Diagnóstico Rural Participativo</h4>
+        <p>Apoya la construcción inicial de mapas, preguntas y prioridades mediante un diálogo con la comunidad.</p>
+        <p class="fuente-pregunta"><strong>Para investigar:</strong> ¿Qué partes del cronograma podrían modificarse tras el diagnóstico participativo?</p>
+        <a class="fuente-enlace" href="https://www.fao.org/family-farming/detail/es/c/1443359/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Diagnóstico Rural Participativo en una pestaña nueva">Consultar fuente externa ↗</a>
+      </article>
+    </div>
   </div>
 
   <div class="conexiones">
@@ -517,6 +665,28 @@ footer {
     ¿Qué conocimientos nos ayudaron a responder?
     ¿Qué dudas aparecieron?
     ¿Qué necesitamos investigar en nuestra institución?
+  </div>
+
+  <!-- Recursos externos con función pedagógica: laboratorio -->
+  <div class="fuentes" aria-label="Fuentes externas para este nodo">
+    <h3>Explora, investiga y conecta</h3>
+    <p class="fuentes-intro">Estos materiales amplían la experiencia: consulta las fuentes, contrasta sus explicaciones con lo que observa la comunidad y registra nuevas preguntas en la <a href="#saberes">bitácora</a>.</p>
+    <div class="fuentes-grid">
+      <article class="fuente-card">
+        <p class="fuente-origen">Ministerio de Ambiente · Orientación oficial</p>
+        <h4>Código de colores para separar residuos en Colombia</h4>
+        <p>Contrasta las respuestas del juego con la clasificación colombiana: blanco, negro y verde.</p>
+        <p class="fuente-pregunta"><strong>Para investigar:</strong> ¿Por qué un mismo material puede requerir un manejo diferente según su estado y posibilidad de aprovechamiento?</p>
+        <a class="fuente-enlace" href="https://www.minambiente.gov.co/gobierno-unifica-el-codigo-de-colores-para-la-separacion-de-residuos-en-la-fuente-a-nivel-nacional/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Código de colores para separar residuos en Colombia en una pestaña nueva">Consultar fuente externa ↗</a>
+      </article>
+      <article class="fuente-card">
+        <p class="fuente-origen">Ellen MacArthur Foundation · Infografía explicativa</p>
+        <h4>El diagrama de la mariposa</h4>
+        <p>Visualiza ciclos biológicos y técnicos y amplía el debate desde la separación de residuos hacia la prevención.</p>
+        <p class="fuente-pregunta"><strong>Para investigar:</strong> ¿Por qué separar los residuos no es la única alternativa para disminuirlos?</p>
+        <a class="fuente-enlace" href="https://www.ellenmacarthurfoundation.org/es/el-diagrama-de-la-mariposa" target="_blank" rel="noopener noreferrer" aria-label="Abrir El diagrama de la mariposa en una pestaña nueva">Consultar fuente externa ↗</a>
+      </article>
+    </div>
   </div>
 
   <div class="conexiones">
@@ -566,6 +736,28 @@ footer {
 
   <p id="estado" role="status"></p>
 
+  <!-- Recursos externos con función pedagógica: saberes -->
+  <div class="fuentes" aria-label="Fuentes externas para este nodo">
+    <h3>Explora, investiga y conecta</h3>
+    <p class="fuentes-intro">Estos materiales amplían la experiencia: consulta las fuentes, contrasta sus explicaciones con lo que observa la comunidad y registra nuevas preguntas en la <a href="#saberes">bitácora</a>.</p>
+    <div class="fuentes-grid">
+      <article class="fuente-card">
+        <p class="fuente-origen">Our World in Data · Gráfico interactivo en inglés</p>
+        <h4>Generación de residuos plásticos: visualización de datos</h4>
+        <p>Permite explorar estimaciones nacionales sobre residuos plásticos y discutir escalas y límites de los datos.</p>
+        <p class="fuente-pregunta"><strong>Para investigar:</strong> ¿Qué podemos y qué no podemos concluir al comparar datos nacionales con registros de una escuela?</p>
+        <a class="fuente-enlace" href="https://ourworldindata.org/grapher/plastic-waste-generation" target="_blank" rel="noopener noreferrer" aria-label="Abrir Generación de residuos plásticos: visualización de datos en una pestaña nueva">Consultar fuente externa ↗</a>
+      </article>
+      <article class="fuente-card">
+        <p class="fuente-origen">FAO / CLACSO · Manual en español</p>
+        <h4>Herramientas de diagnóstico participativo</h4>
+        <p>Brinda ideas para registrar acuerdos, organizar hallazgos y presentar resultados junto con la comunidad.</p>
+        <p class="fuente-pregunta"><strong>Para investigar:</strong> ¿Cómo dejar visibles tanto los acuerdos como las interpretaciones diferentes?</p>
+        <a class="fuente-enlace" href="https://www.fao.org/family-farming/detail/es/c/1443359/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Herramientas de diagnóstico participativo en una pestaña nueva">Consultar fuente externa ↗</a>
+      </article>
+    </div>
+  </div>
+
   <div class="conexiones">
     <a class="boton secundario" href="#iap">Dialogar con otros</a>
     <a class="boton secundario" href="#ciencia">Contrastar evidencias</a>
@@ -609,6 +801,28 @@ footer {
     concretas deberán responder al diagnóstico y
     a las decisiones de la comunidad educativa.
   </p>
+
+  <!-- Recursos externos con función pedagógica: transformar -->
+  <div class="fuentes" aria-label="Fuentes externas para este nodo">
+    <h3>Explora, investiga y conecta</h3>
+    <p class="fuentes-intro">Estos materiales amplían la experiencia: consulta las fuentes, contrasta sus explicaciones con lo que observa la comunidad y registra nuevas preguntas en la <a href="#saberes">bitácora</a>.</p>
+    <div class="fuentes-grid">
+      <article class="fuente-card">
+        <p class="fuente-origen">Ellen MacArthur Foundation · Infografía y explicación</p>
+        <h4>Economía circular: ciclos biológico y técnico</h4>
+        <p>Ayuda a comparar alternativas que prolongan el uso de materiales y reducen la generación de residuos.</p>
+        <p class="fuente-pregunta"><strong>Para investigar:</strong> ¿Qué acciones son viables para nuestra institución y cuáles requieren otros actores o recursos?</p>
+        <a class="fuente-enlace" href="https://www.ellenmacarthurfoundation.org/es/el-diagrama-de-la-mariposa" target="_blank" rel="noopener noreferrer" aria-label="Abrir Economía circular: ciclos biológico y técnico en una pestaña nueva">Consultar fuente externa ↗</a>
+      </article>
+      <article class="fuente-card">
+        <p class="fuente-origen">Colombia Aprende · Experiencia de referencia</p>
+        <h4>Ecoinvestigadores: investigación y acción ambiental escolar</h4>
+        <p>Muestra procesos de acción y socialización escolar que pueden alimentar una evaluación crítica de la experiencia propia.</p>
+        <p class="fuente-pregunta"><strong>Para investigar:</strong> ¿Qué cambios debemos evaluar y quiénes deberían participar en esa valoración?</p>
+        <a class="fuente-enlace" href="https://contactomaestro.colombiaaprende.edu.co/experiencias-significativas/ecoinvestigadores-una-propuesta-educativa-integral" target="_blank" rel="noopener noreferrer" aria-label="Abrir Ecoinvestigadores: investigación y acción ambiental escolar en una pestaña nueva">Consultar fuente externa ↗</a>
+      </article>
+    </div>
+  </div>
 
   <div class="conexiones">
     <a class="boton secundario" href="#mundo">Volver al problema</a>
@@ -705,6 +919,28 @@ footer {
     conectividad suficiente.
   </p>
 
+  <!-- Recursos externos con función pedagógica: docente -->
+  <div class="fuentes" aria-label="Fuentes externas para este nodo">
+    <h3>Explora, investiga y conecta</h3>
+    <p class="fuentes-intro">Estos materiales amplían la experiencia: consulta las fuentes, contrasta sus explicaciones con lo que observa la comunidad y registra nuevas preguntas en la <a href="#saberes">bitácora</a>.</p>
+    <div class="fuentes-grid">
+      <article class="fuente-card">
+        <p class="fuente-origen">Ministerio de Educación Nacional · Estándares curriculares</p>
+        <h4>Guía No. 7: Formar en ciencias, ¡el desafío!</h4>
+        <p>Referencia curricular para justificar la indagación y las competencias de octavo y noveno.</p>
+        <p class="fuente-pregunta"><strong>Para investigar:</strong> ¿Qué estándares específicos evidenciarán las actividades y los registros propuestos?</p>
+        <a class="fuente-enlace" href="https://www.mineducacion.gov.co/1621/articles-81033_archivo.pdf" target="_blank" rel="noopener noreferrer" aria-label="Abrir Guía No. 7: Formar en ciencias, ¡el desafío! en una pestaña nueva">Consultar fuente externa ↗</a>
+      </article>
+      <article class="fuente-card">
+        <p class="fuente-origen">Universidad Nacional de Colombia · Reflexión conceptual</p>
+        <h4>IAP y diálogo de saberes</h4>
+        <p>Apoya la fundamentación de un diseño que no confunda consulta a la comunidad con investigación verdaderamente participativa.</p>
+        <p class="fuente-pregunta"><strong>Para investigar:</strong> ¿Cómo se evidenciará la posibilidad real de revisar el problema y las decisiones iniciales?</p>
+        <a class="fuente-enlace" href="https://periodico.unal.edu.co/articulos/investigacion-accion-participativa-la-ciencia-en-el-terreno-de-la-realidad" target="_blank" rel="noopener noreferrer" aria-label="Abrir IAP y diálogo de saberes en una pestaña nueva">Consultar fuente externa ↗</a>
+      </article>
+    </div>
+  </div>
+
   <div class="conexiones">
     <a class="boton secundario" href="#ruta">Ver secuencia</a>
     <a class="boton secundario" href="#mapa">Mapa hipertextual</a>
@@ -755,9 +991,9 @@ function descargar() {
   const texto = campos.map(id => {
     const etiqueta = document.querySelector(
       'label[for="' + id + '"]').textContent;
-    return etiqueta + "\\n" +
+    return etiqueta + "\n" +
       document.getElementById(id).value;
-  }).join("\\n\\n");
+  }).join("\n\n");
   const archivo = new Blob([texto], {
     type:"text/plain;charset=utf-8"
   });
