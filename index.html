@@ -7,6 +7,10 @@
 <title>¿Quién conoce la cura? | Ciencia y acción colectiva</title>
 <meta name="description" content="Guía hipertextual de Ciencias Naturales para grado octavo. Investigación científica, acción participativa y transformación ambiental de la escuela.">
 <meta name="theme-color" content="#173f39">
+<!-- Ubuntu: familias Regular, Condensed y Mono, alojadas en Google Fonts. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&amp;family=Ubuntu+Mono:wght@400;700&amp;family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&amp;display=swap" rel="stylesheet">
 <style>
 :root {
   --verde: #17483e;
@@ -552,6 +556,44 @@ footer .creditos {max-width:850px;margin:15px auto;line-height:1.9;}
   .media-figura img { max-height: none; }
   .video-encuadre iframe { height: 100% !important; }
 }
+
+
+/* ===== SISTEMA TIPOGRÁFICO UBUNTU =====
+   Ubuntu: titulares y lectura; Ubuntu Condensed: rótulos;
+   Ubuntu Mono: marcas de tiempo. Sin cambios de estructura ni contenido. */
+:root {
+  --font-ubuntu: 'Ubuntu', 'Segoe UI', Arial, sans-serif;
+  --font-ubuntu-condensed: 'Ubuntu Condensed', 'Ubuntu', Arial, sans-serif;
+  --font-ubuntu-mono: 'Ubuntu Mono', ui-monospace, monospace;
+}
+body, button, input, textarea, select { font-family: var(--font-ubuntu); }
+body { font-weight: 400; }
+.hero h1 {
+  font-family: var(--font-ubuntu);
+  font-weight: 700;
+  letter-spacing: -.045em;
+  line-height: 1.06;
+}
+section.nodo h2 {
+  font-family: var(--font-ubuntu);
+  font-weight: 500;
+  letter-spacing: -.035em;
+}
+h3, h4, .fuente-card h4, .tarjeta strong,
+section.nodo h3 { font-family: var(--font-ubuntu); font-weight: 700; }
+header strong, footer strong {
+  font-family: var(--font-ubuntu);
+  font-weight: 700;
+}
+.hero-lead { font-weight: 300; }
+.hero-eyebrow, .hero-note, .etiqueta, .fuente-card::before {
+  font-family: var(--font-ubuntu-condensed);
+  font-weight: 400;
+}
+.fase small { font-family: var(--font-ubuntu-mono); font-weight: 700; }
+nav a, .boton, .fuente-enlace, .multimedia-enlace,
+label, .fuente-origen { font-family: var(--font-ubuntu); font-weight: 500; }
+.media-figura figcaption, .footer-details { font-family: var(--font-ubuntu); font-weight: 400; }
 
 </style>
 </head>
