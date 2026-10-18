@@ -4,7 +4,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>¿Quién conoce la cura?</title>
+<title>¿Quién conoce la cura? | Ciencia y acción colectiva</title>
+<meta name="description" content="Guía hipertextual de Ciencias Naturales para grado octavo. Investigación científica, acción participativa y transformación ambiental de la escuela.">
+<meta name="theme-color" content="#173f39">
 <style>
 :root {
   --verde: #17483e;
@@ -238,12 +240,261 @@ footer {
   section.nodo { padding: 20px; }
   iframe { height: 490px; }
 }
+
+
+/* ===== IDENTIDAD VISUAL · ¿QUIÉN CONOCE LA CURA? ===== */
+:root {
+  --verde:#173f39;
+  --verde2:#247560;
+  --claro:#f8f7f2;
+  --crema:#fff7e8;
+  --texto:#223731;
+  --linea:#dce9df;
+  --naranja:#b8663d;
+  --tinta-suave:#60746b;
+  --sombra:0 12px 34px rgba(21,60,47,.07);
+}
+html { scroll-padding-top:105px; }
+body {
+  background: radial-gradient(ellipse at 5% 4%, #e7f3e8 0, transparent 34%),
+              radial-gradient(ellipse at 96% 21%, #fff3d8 0, transparent 29%),
+              radial-gradient(ellipse at 3% 83%, #e8f1e6 0, transparent 29%),
+              var(--claro);
+  font-family: 'Segoe UI', 'Aptos', system-ui, -apple-system, Arial, sans-serif;
+  font-size:16px;
+  line-height:1.68;
+}
+::selection { background:#f3d799; color:#16382d; }
+a:focus-visible, button:focus-visible, textarea:focus-visible {
+  outline:3px solid #d29b55; outline-offset:3px;
+}
+header {
+  position:sticky; top:0; z-index:30;
+  background:rgba(21,60,53,.97);
+  backdrop-filter:blur(14px);
+  padding:11px clamp(16px,4vw,70px) 10px;
+  border-bottom:1px solid #ffffff30;
+  box-shadow:0 4px 30px rgba(15,55,43,.16);
+}
+header strong {
+  font-size:.98rem; letter-spacing:.02em;
+  display:inline-flex; align-items:center;
+}
+header strong::before {
+  content:'✳'; display:inline-grid; place-items:center;
+  background:#dcefbf; color:#1c5e4d; width:28px; height:28px;
+  border-radius:10px; margin-right:9px; font-size:1.1rem;
+}
+nav { gap:6px; flex-wrap:nowrap; overflow-x:auto; scrollbar-width:thin; padding-bottom:2px; }
+nav a {
+  white-space:nowrap; border-color:transparent; color:#e1eee6;
+  font-size:.77rem; font-weight:600; padding:7px 11px; border-radius:99px;
+  transition:background .2s ease, color .2s ease;
+}
+nav a:hover, nav a:focus-visible { background:#ffffff20; color:white; }
+.hero {
+  isolation:isolate; position:relative; overflow:hidden;
+  padding:clamp(50px,7vw,92px) clamp(23px,6vw,90px) clamp(55px,7vw,90px);
+  min-height:565px;
+  color:#fcfff9;
+  text-align:left;
+  background:
+    radial-gradient(circle at 67% -8%,#528b6b7d 0,transparent 38%),
+    radial-gradient(circle at 1% 100%,#285a4877 0,transparent 36%),
+    linear-gradient(120deg,#163e38 8%,#20594d 61%,#2e745b 100%);
+}
+.hero::before {
+  content:''; position:absolute; inset:0; pointer-events:none; z-index:-1;
+  background-image:
+    radial-gradient(circle at 12% 18%,#ffffff18 0 2px, transparent 2.6px),
+    radial-gradient(circle at 46% 72%,#ffffff15 0 1.5px, transparent 2px);
+  background-size:38px 38px,56px 56px;
+  opacity:.7;
+}
+.hero-inner {
+  max-width:1280px; margin:auto; display:grid;
+  grid-template-columns:1.03fr .97fr;
+  gap:clamp(24px,4vw,74px); align-items:center;
+}
+.hero-copy { position:relative; z-index:2; }
+.hero-eyebrow {
+  display:inline-flex; gap:9px; align-items:center;
+  border:1px solid #d5efd04d; border-radius:99px;
+  padding:9px 16px; background:#ffffff12;
+  font-size:.72rem; font-weight:800; letter-spacing:.15em;
+  text-transform:uppercase; color:#e5f4dd;
+}
+.hero h1 {
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:clamp(3.3rem,6.4vw,6.4rem);
+  font-weight:normal; line-height:.99;
+  letter-spacing:-.065em;
+  margin:27px 0 27px; max-width:720px;
+}
+.hero-lead { font-size:clamp(1.13rem,1.7vw,1.37rem)!important;
+  color:#e1f2e8; font-weight:400; line-height:1.55;
+  max-width:610px!important; margin:0!important;
+}
+.hero-metadata {
+  display:flex; flex-wrap:wrap; gap:9px;
+  margin:25px 0 30px;
+}
+.hero-chip {
+  font-size:.78rem; border-radius:99px; color:#eff8ee;
+  background:#ffffff17; padding:8px 13px; border:1px solid #ffffff28;
+}
+.hero .boton {
+  background:#e7eecc; color:#153f36; font-weight:800;
+  padding:14px 22px; border-radius:99px; box-shadow:0 8px 23px #122c2370;
+}
+.hero .boton:hover { background:white; transform:translateY(-2px); }
+.hero-art { width:100%; min-width:0; filter:drop-shadow(0 23px 36px #092b2945); }
+.hero-art svg { width:100%; height:auto; display:block; }
+.hero-note {
+  max-width:1280px; margin:20px auto 0; color:#d0ebdb;
+  letter-spacing:.08em; font-weight:600; text-transform:uppercase; font-size:.69rem;
+}
+main { max-width:1160px; padding:32px clamp(15px,3vw,26px) 80px; }
+section.nodo {
+  position:relative; overflow:hidden;
+  border:1px solid #dce8de;
+  background:linear-gradient(145deg,#fff,#fffdfa 75%);
+  border-radius:24px;
+  box-shadow:var(--sombra);
+  margin:26px 0; padding:clamp(25px,4.1vw,50px);
+  scroll-margin-top:109px;
+}
+section.nodo::before {
+  content:''; position:absolute; top:-65px; right:-62px;
+  width:230px; height:230px; border-radius:50%; pointer-events:none;
+  background:radial-gradient(circle,#e5f1e9 0, #edf5ee89 47%, transparent 70%);
+}
+section.nodo > * { position:relative; }
+section.nodo h2 {
+  font:normal clamp(1.75rem,3.3vw,2.7rem)/1.16 Georgia,'Times New Roman',serif;
+  color:var(--verde); letter-spacing:-.033em;
+  margin:14px 0 22px;
+  max-width:850px;
+}
+section.nodo h3 { font-size:clamp(1.05rem,1.5vw,1.25rem); line-height:1.3; margin-top:27px; }
+section.nodo p { max-width:900px; }
+.etiqueta {
+  background:#eaf1e7; border:1px solid #d7e7da;
+  color:#2a6e57; font-size:.67rem;
+  display:inline-flex; padding:7px 13px; border-radius:99px;
+}
+#mapa { background:linear-gradient(145deg,#fffaf0,#fcfffa 58%,#fff); }
+#mapa .tarjetas { grid-template-columns:repeat(4,minmax(0,1fr)); }
+.tarjetas { gap:16px; }
+.tarjeta {
+  position:relative; background:linear-gradient(155deg,#fffdf6,#f8fcf5);
+  border:1px solid #e4e8d9; border-radius:18px; padding:24px;
+  box-shadow:0 4px 13px rgba(30,70,45,.035);
+  transition:transform .22s ease, box-shadow .22s ease, border-color .22s;
+}
+a.tarjeta:hover, a.tarjeta:focus-visible {
+  transform:translateY(-5px); box-shadow:0 16px 24px #23493918;
+  border-color:#a5c9b2;
+}
+.tarjeta strong { color:#214c3e; line-height:1.36; }
+.node-icon {
+  display:inline-grid; place-items:center; width:46px; height:46px;
+  background:#eaf1e6; border-radius:15px; font-size:1.45rem;
+  margin-bottom:16px; box-shadow:inset 0 0 0 1px #e0e9db;
+}
+#mapa .tarjeta:nth-child(3n + 2) .node-icon {background:#fff0dd;}
+#mapa .tarjeta:nth-child(3n + 3) .node-icon {background:#e6f1f3;}
+#mapa .tarjeta::after {
+  content:'↗'; position:absolute; right:16px; top:14px;
+  color:#739a7e; font-size:1rem;
+}
+.conexiones { margin-top:28px; padding-top:22px; border-top:1px dashed #cddfcf; }
+.boton {
+  border-radius:11px; padding:12px 17px;
+  background:#216b56; font-weight:700;
+  transition:background .2s,transform .2s,box-shadow .2s;
+}
+.boton:hover {background:#164d40; box-shadow:0 5px 14px #1f5d421e;}
+.boton.secundario {background:#edf5ed; color:#205947;}
+.boton.secundario:hover {background:#dfeede;}
+.aviso {
+  border-left:4px solid #c47f4d;
+  background:linear-gradient(110deg,#fff5e6,#fffaf1);
+  border-radius:0 12px 12px 0; padding:18px 22px;
+}
+.fase {
+  border-left:4px solid #3d9973;
+  background:linear-gradient(110deg,#f3f9f3,#fcfefa);
+  border-radius:0 14px 14px 0;
+  padding:18px 24px; margin:15px 0;
+}
+.fase h3 { margin:5px 0 14px!important; }
+.fase small {
+  display:inline-block; color:#357d60; font-weight:850;
+  font-size:.69rem; letter-spacing:.13em;
+}
+.fase p {margin:7px 0;}
+.fuentes { border-top:2px solid #e6efe4; padding-top:25px; }
+.fuentes-grid { gap:15px; }
+.fuente-card {
+  background:linear-gradient(160deg,#f9fcfa,#fffdf7);
+  border:1px solid #dce8dd; border-radius:16px;
+  padding:22px; box-shadow:0 6px 19px #2758400d;
+}
+.fuente-card::before { content:'↗ Recurso externo'; text-transform:uppercase;
+  color:#667f71; letter-spacing:.09em; font-weight:750; font-size:.63rem; }
+.fuente-card h4 { font-size:1.1rem; color:#214c3d; }
+.fuente-pregunta { background:#fff7e9; border-left-color:#c98a50; border-radius:0 8px 8px 0; }
+.fuente-enlace { color:#196a51; text-decoration-thickness:1.5px; }
+.fuente-enlace:hover { color:#b2603c; }
+textarea, input, select { background:white; border-color:#cbdccf; border-radius:10px; }
+footer {
+  background:linear-gradient(115deg,#153e36,#28664f);
+  color:#e2eee5; padding:45px 22px;
+}
+footer strong {font-family:Georgia,serif;font-size:1.5rem; font-weight:normal;color:white;}
+footer .creditos {max-width:850px;margin:15px auto;line-height:1.9;}
+.footer-details {font-size:.82rem; color:#c4dfcd;}
+.back-to-top {
+  position:fixed; right:20px; bottom:20px; z-index:25;
+  width:46px; height:46px; display:grid;place-items:center;
+  text-decoration:none; border-radius:99px; background:#214f42;
+  border:2px solid #edf5e8; box-shadow:0 6px 18px #17372a40;
+  color:white; font-size:1.15rem;
+}
+.back-to-top:hover {background:#347a5f;}
+@media (max-width: 1050px) {
+  #mapa .tarjetas {grid-template-columns:repeat(2,minmax(0,1fr));}
+  .hero-inner {grid-template-columns:1fr 1fr;gap:20px;}
+}
+@media (max-width: 740px) {
+  header {padding:10px 12px;}
+  nav {margin-top:8px;}
+  nav a {font-size:.74rem; padding:7px 10px;}
+  .hero {padding:46px 23px 42px;}
+  .hero-inner {grid-template-columns:1fr;}
+  .hero-art {max-width:470px;margin:0 auto;}
+  .hero-note {text-align:center;}
+  section.nodo {padding:24px 20px;margin:20px 0;border-radius:18px;}
+  .back-to-top {bottom:12px;right:12px;width:41px;height:41px;}
+}
+@media (max-width: 460px) {
+  #mapa .tarjetas {grid-template-columns:1fr;}
+  .hero h1 {font-size:3.25rem;}
+  .hero-art {margin-top:5px;}
+  .hero-chip {font-size:.68rem;}
+}
+@media (prefers-reduced-motion:reduce) {
+  html {scroll-behavior:auto;}
+  *,*::before,*::after {transition:none!important; animation:none!important;}
+}
+
 </style>
 </head>
 <body>
 
 <header>
-  <strong>✳ ¿Quién conoce la cura?</strong>
+  <strong>¿Quién conoce la cura?</strong>
   <nav aria-label="Navegación principal">
     <a href="#inicio">Inicio</a>
     <a href="#mundo">El mundo nos habla</a>
@@ -258,15 +509,88 @@ footer {
 </header>
 
 <div class="hero" id="inicio">
-  <p>EXPERIENCIA EDUCATIVA TRANSDISCIPLINAR</p>
-  <h1>¿Quién conoce la cura?</h1>
-  <p>Ciencia, saberes y acción colectiva para transformar nuestro entorno.</p>
-  <p style="margin-top:25px">
-    Grado octavo · Ciencias Naturales y Educación Ambiental
-  </p>
-  <p style="margin-top:25px">
-    <a class="boton" href="#mapa">Comenzar la exploración ↓</a>
-  </p>
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <span class="hero-eyebrow">✦ Experiencia educativa transdisciplinar</span>
+      <h1>¿Quién conoce<br>la cura?</h1>
+      <p class="hero-lead">Ciencia, saberes y acción colectiva para transformar nuestro entorno.</p>
+      <div class="hero-metadata">
+        <span class="hero-chip">Grado octavo</span>
+        <span class="hero-chip">Ciencias Naturales y Educación Ambiental</span>
+        <span class="hero-chip">Investigación + participación</span>
+      </div>
+      <a class="boton" href="#mapa">Explorar los ocho caminos ↓</a>
+    </div>
+    <div class="hero-art"><svg viewBox="0 0 640 615" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="hero-svg-title hero-svg-desc">
+  <title id="hero-svg-title">Ciencia y comunidad para cuidar el entorno escolar</title>
+  <desc id="hero-svg-desc">Ilustración original de paisaje montañoso, una escuela, un río y personas que comparten observaciones sobre la naturaleza.</desc>
+  <defs>
+    <linearGradient id="sky" x1=".1" y1="0" x2=".9" y2="1"><stop stop-color="#f4eacb"/><stop offset="1" stop-color="#d8f1e1"/></linearGradient>
+    <linearGradient id="hill" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#66a98a"/><stop offset="1" stop-color="#287455"/></linearGradient>
+    <linearGradient id="hill2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#b5cda1"/><stop offset="1" stop-color="#548f73"/></linearGradient>
+    <linearGradient id="river" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e1fafa"/><stop offset="1" stop-color="#79b6af"/></linearGradient>
+    <filter id="softshadow" x="-20%" y="-20%" width="140%" height="145%"><feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#0c3a2e" flood-opacity=".16"/></filter>
+    <clipPath id="sceneclip"><rect x="35" y="44" width="570" height="520" rx="70"/></clipPath>
+  </defs>
+  <g filter="url(#softshadow)"><rect x="35" y="44" width="570" height="520" rx="70" fill="url(#sky)"/></g>
+  <g clip-path="url(#sceneclip)">
+    <circle cx="473" cy="145" r="66" fill="#fbd996" opacity=".91"/>
+    <circle cx="473" cy="145" r="91" fill="#fff8c4" opacity=".24"/>
+    <path d="M-5 318 Q70 270 125 289 Q179 221 260 268 Q340 181 425 248 Q485 212 530 240 Q588 221 680 282 L680 570 L-5 570Z" fill="#c4d9bb"/>
+    <path d="M-5 352 Q65 315 127 327 Q224 263 291 314 Q365 265 420 299 Q524 256 650 329 L650 610 L-5 610Z" fill="url(#hill2)"/>
+    <path d="M-5 421 Q100 348 203 382 Q302 332 392 372 Q512 328 680 408 L680 620 L-5 620Z" fill="url(#hill)"/>
+    <path d="M95 563 Q145 513 242 515 Q303 505 320 458 Q329 428 354 423 Q369 417 387 430 Q354 475 369 492 Q410 540 493 566" fill="none" stroke="url(#river)" stroke-width="37" stroke-linecap="round"/>
+    <path d="M99 559 Q165 504 241 515 Q307 503 324 456 Q342 421 365 424" fill="none" stroke="#ffffff" stroke-width="5" opacity=".45" stroke-linecap="round"/>
+    <!-- school -->
+    <g transform="translate(160 305)">
+      <path d="M-12 45 L91 -17 L194 45Z" fill="#cc764a" stroke="#ad603b" stroke-width="3"/>
+      <rect x="0" y="44" width="183" height="123" rx="10" fill="#f9f0d6" stroke="#e3d0aa" stroke-width="3"/>
+      <rect x="13" y="60" width="44" height="43" rx="4" fill="#b7ded4" stroke="#538c84" stroke-width="5"/>
+      <rect x="127" y="60" width="43" height="43" rx="4" fill="#b7ded4" stroke="#538c84" stroke-width="5"/>
+      <path d="M35 60v43M148 60v43" stroke="#538c84" stroke-width="3"/>
+      <rect x="74" y="96" width="40" height="71" rx="6" fill="#47755e"/>
+      <circle cx="106" cy="132" r="3" fill="#e7db98"/>
+      <rect x="67" y="41" width="54" height="17" rx="8" fill="#fff9e8"/>
+      <circle cx="94" cy="49" r="4" fill="#70a385"/>
+    </g>
+    <!-- growing plants -->
+    <g fill="none" stroke-linecap="round">
+      <path d="M75 501 Q94 457 81 394" stroke="#2d6654" stroke-width="11"/>
+      <path d="M82 441 Q44 429 51 399 Q82 408 82 441Z" fill="#79b38c" stroke="#3c8a66" stroke-width="2"/>
+      <path d="M83 418 Q122 403 125 373 Q93 381 83 418Z" fill="#98c29b" stroke="#3c8a66" stroke-width="2"/>
+      <path d="M526 526 Q529 484 557 436" stroke="#2d6654" stroke-width="10"/>
+      <path d="M541 487 Q493 462 497 430 Q528 440 541 487Z" fill="#83b99c" stroke="#3c8a66" stroke-width="2"/>
+      <path d="M542 478 Q588 466 600 438 Q569 435 542 478Z" fill="#b4ce95" stroke="#3c8a66" stroke-width="2"/>
+    </g>
+    <!-- three people collaborating on a table -->
+    <g transform="translate(310 442)">
+      <ellipse cx="87" cy="109" rx="144" ry="29" fill="#174b3c" opacity=".16"/>
+      <path d="M-3 56 Q16 27 50 36 L66 113 L8 113Z" fill="#e5a667"/>
+      <circle cx="23" cy="16" r="22" fill="#ca8b66"/>
+      <path d="M3 15 Q-3 -13 21 -10 Q44 -13 47 11 Q24 -3 3 15Z" fill="#47382d"/>
+      <path d="M120 47 Q148 28 167 46 L192 113 L126 113Z" fill="#8fc5ba"/>
+      <circle cx="145" cy="18" r="22" fill="#b97752"/>
+      <path d="M128 6 Q139 -13 161 -6 Q170 8 165 17 Q148 1 128 6Z" fill="#44362c"/>
+      <path d="M67 27 Q90 11 112 31 L128 113 L55 113Z" fill="#d9bf76"/>
+      <circle cx="89" cy="5" r="21" fill="#bd845c"/>
+      <path d="M70 1 Q74 -23 98 -18 Q117 -8 109 8 Q97 -2 70 1Z" fill="#312d29"/>
+      <path d="M2 81 H181 L169 119 H15Z" fill="#bb8a5c"/>
+      <path d="M14 82 H169" stroke="#f9dcb8" stroke-width="5"/>
+      <rect x="60" y="66" width="58" height="16" rx="3" fill="#fff5d7" transform="rotate(-5 88 73)"/>
+      <path d="M72 71H109 M72 76H99" stroke="#4a8979" stroke-width="2"/>
+    </g>
+    <g opacity=".65" fill="#2f735b">
+      <circle cx="101" cy="205" r="6"/><circle cx="119" cy="185" r="4"/>
+      <circle cx="550" cy="325" r="7"/><circle cx="567" cy="309" r="4"/>
+    </g>
+    <path d="M107 194 Q188 119 285 165 Q346 194 387 147" stroke="#3a8b75" stroke-width="3" stroke-dasharray="6 10" fill="none" opacity=".65"/>
+  </g>
+  <!-- insight badges floated outside the scene -->
+  <g transform="translate(385 43)" filter="url(#softshadow)"><rect x="0" y="0" width="159" height="54" rx="26" fill="#fffaf0"/><circle cx="30" cy="27" r="16" fill="#e4f0da"/><path d="M29 18v18 M20 27h18" stroke="#53896a" stroke-width="3"/><path d="M58 23h77M58 32h51" stroke="#b8c9ae" stroke-width="5" stroke-linecap="round"/></g>
+  <g transform="translate(18 438)" filter="url(#softshadow)"><rect x="0" y="0" width="115" height="69" rx="21" fill="#fff9ee"/><circle cx="35" cy="33" r="19" fill="#e0efe3"/><path d="M27 39l7-20 9 20M30 32h10" fill="none" stroke="#478c75" stroke-width="3" stroke-linecap="round"/><path d="M67 27h33M67 36h20" stroke="#c3d5bf" stroke-width="5" stroke-linecap="round"/></g>
+</svg></div>
+  </div>
+  <div class="hero-note">Observa · Pregunta · Investiga · Dialoga · Transforma</div>
 </div>
 
 <main>
@@ -287,34 +611,42 @@ footer {
 
   <div class="tarjetas">
     <a class="tarjeta" href="#mundo">
+      <span class="node-icon" aria-hidden="true">🌎</span>
       <strong>01 · El mundo nos habla</strong>
       Observación y problemas ambientales.
     </a>
     <a class="tarjeta" href="#ciencia">
+      <span class="node-icon" aria-hidden="true">🔬</span>
       <strong>02 · ¿Cómo conocemos?</strong>
       Preguntas, hipótesis y evidencias.
     </a>
     <a class="tarjeta" href="#iap">
+      <span class="node-icon" aria-hidden="true">🤝</span>
       <strong>03 · Investigar con otros</strong>
       Investigación participativa y diálogo de saberes.
     </a>
     <a class="tarjeta" href="#ruta">
+      <span class="node-icon" aria-hidden="true">🧭</span>
       <strong>04 · Nuestra ruta</strong>
       Seis fases de investigación y acción.
     </a>
     <a class="tarjeta" href="#laboratorio">
+      <span class="node-icon" aria-hidden="true">🧩</span>
       <strong>05 · Laboratorio interactivo</strong>
       Juegos y recursos hipermedia.
     </a>
     <a class="tarjeta" href="#saberes">
+      <span class="node-icon" aria-hidden="true">🧶</span>
       <strong>06 · Tejido de saberes</strong>
       Bitácora y reflexión.
     </a>
     <a class="tarjeta" href="#transformar">
+      <span class="node-icon" aria-hidden="true">🌱</span>
       <strong>07 · Transformar y volver</strong>
       Acción, evaluación y nuevos ciclos.
     </a>
     <a class="tarjeta" href="#docente">
+      <span class="node-icon" aria-hidden="true">📗</span>
       <strong>08 · Guía docente</strong>
       Fundamentación y orientaciones.
     </a>
@@ -948,17 +1280,13 @@ footer {
 </section>
 
 </main>
+<a class="back-to-top" href="#mapa" aria-label="Volver al mapa hipertextual" title="Volver al mapa">⌂</a>
 
 <footer>
   <strong>¿Quién conoce la cura?</strong>
   <p>Ciencia, saberes y acción colectiva.</p>
-  <p>
-  Yohana Caicedo Alulema ·
-  Leidy Camila Paz Patiño ·
-  Omar Giovanni Montilla Eraso ·
-  Diana Catherine Puerres Castro
-</p>
-  <p>Maestría en Educación Virtual</p>
+  <p class="creditos">Yohana Caicedo Alulema · Leidy Camila Paz Patiño · Omar Giovanni Montilla Eraso · Diana Catherine Puerres Castro</p>
+  <p class="footer-details">Maestría en Educación Virtual · Experiencia educativa para grado octavo</p>
 </footer>
 
 <script>
