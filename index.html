@@ -595,6 +595,26 @@ nav a, .boton, .fuente-enlace, .multimedia-enlace,
 label, .fuente-origen { font-family: var(--font-ubuntu); font-weight: 500; }
 .media-figura figcaption, .footer-details { font-family: var(--font-ubuntu); font-weight: 400; }
 
+
+/* Actividad Genially: juego integrado y accesible desde el mismo nodo */
+.genially-area {
+  width: 100%;
+  margin: 16px 0 9px;
+  border-radius: 14px;
+  overflow: hidden;
+}
+.genially-area iframe {
+  display: block;
+  width: 100%;
+  height: clamp(420px, 65vw, 670px);
+  border: 0;
+  border-radius: 14px;
+  background: #e8f1ea;
+}
+@media (max-width: 650px) {
+  .genially-area iframe { height: 540px; }
+}
+
 </style>
 </head>
 <body>
@@ -1142,6 +1162,20 @@ label, .fuente-origen { font-family: var(--font-ubuntu); font-weight: 500; }
 
   <div id="juego2"></div>
 
+  <!-- Juego 3: Genially, integrado sin cambiar la organización de los nodos. -->
+  <div class="multimedia-bloque" id="juego-genially" aria-label="Juego interactivo Código secreto sobre el método científico">
+    <h3>Juego 3. Código secreto: desafío del método científico</h3>
+    <p><strong>Plataforma:</strong> Genially. <strong>Creación:</strong> chdiana1703.</p>
+    <p>Resuelve las preguntas, encuentra los símbolos ocultos y descubre el código. Usa las pistas para repasar cómo observamos, planteamos preguntas y construimos explicaciones científicas.</p>
+    <button class="boton" type="button" id="abrir-genially" onclick="cargarGenially()"
+      aria-controls="contenedor-genially" aria-expanded="false">
+      Iniciar juego 3 · Código secreto
+    </button>
+    <div id="contenedor-genially" class="genially-area" aria-live="polite"></div>
+    <a class="multimedia-enlace" href="https://view.genially.com/6ad5456d7501ab38de6f220f" target="_blank" rel="noopener noreferrer">Abrir el juego en Genially ↗</a>
+    <p class="multimedia-pregunta"><strong>Después del desafío:</strong> ¿Cuáles son las decisiones y evidencias necesarias para investigar de manera rigurosa un problema ambiental de nuestra escuela?</p>
+  </div>
+
 <div class="multimedia-bloque" aria-label="Video educativo: Conozca cómo funciona el nuevo código de colores para reciclar en Colombia">
   <h3>Video · Conozca cómo funciona el nuevo código de colores para reciclar en Colombia</h3>
   <p><strong>Fuente:</strong> El País Cali (2021).</p>
@@ -1452,6 +1486,25 @@ label, .fuente-origen { font-family: var(--font-ubuntu); font-weight: 500; }
 </footer>
 
 <script>
+function cargarGenially() {
+  const destino = document.getElementById("contenedor-genially");
+  if (!destino || destino.querySelector("iframe")) return;
+  const iframe = document.createElement("iframe");
+  iframe.src = "https://view.genially.com/6ad5456d7501ab38de6f220f";
+  iframe.title = "Código secreto: juego interactivo del método científico (Genially)";
+  iframe.loading = "lazy";
+  iframe.referrerPolicy = "strict-origin-when-cross-origin";
+  iframe.setAttribute("allow", "fullscreen; autoplay; clipboard-write");
+  iframe.setAttribute("allowfullscreen", "");
+  destino.appendChild(iframe);
+  const boton = document.getElementById("abrir-genially");
+  if (boton) {
+    boton.setAttribute("aria-expanded", "true");
+    boton.textContent = "Juego 3 cargado";
+    boton.disabled = true;
+  }
+}
+
 function cargarJuego(id, url) {
   const destino = document.getElementById(id);
   if (destino.querySelector("iframe")) return;
